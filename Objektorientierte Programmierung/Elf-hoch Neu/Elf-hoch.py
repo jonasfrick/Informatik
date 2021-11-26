@@ -3,13 +3,13 @@ from Spieler import *
 from Spielmanager import *
 from Würfel import *
 
-w1 = Wuerfel()                          
-w2 = Wuerfel()
-k = Kasse(0)
-sp1 = Spieler('Winner', w1, w2, k)
-sp2 = Spieler('Looser', w1, w2, k)
-sp3 = Spieler('Zitterhand', w1, w2, k)
-m = Spielmanager(sp1, sp2, sp3)
+würfel1 = Wuerfel()                          
+würfel2 = Wuerfel()
+kasse = Kasse(0)
+spieler1 = Spieler('Winner', würfel1, würfel2, kasse)
+spieler2 = Spieler('Looser', würfel1, würfel2, kasse)
+spieler3 = Spieler('Zitterhand', würfel1, würfel2, kasse)
+spielManager = Spielmanager(spieler1, spieler2, spieler3)
 
-m.spielrundeDurchfuehren()
-print(sp1.getMarken(), sp2.getMarken(), sp3.getMarken())
+spielManager.spielrundeDurchfuehren()
+print(spieler1.getMarken(), spieler2.getMarken(), spieler3.getMarken())

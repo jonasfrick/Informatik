@@ -2,10 +2,8 @@ class Kasse(object):
     def __init__(self, pStartwert):
         self.stand = pStartwert
 
-    def auszahlen(self):
-        temp = self.stand
-        self.stand = 0
-        return temp
+    def auszahlen(self, pBetrag):
+         self.stand = self.stand - pBetrag
 
     def einzahlen(self, pBetrag):
         self.stand += pBetrag
