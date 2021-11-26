@@ -13,13 +13,16 @@ class Spieler(object):
         self.rWuerfel1.werfen()
         self.rWuerfel2.werfen()
         augenGesamt = self.rWuerfel1.getAugen() + self.rWuerfel2.getAugen()
+
         if augenGesamt == 12:
             self.marken = self.marken - 12
             self.rKasse.einzahlen(12)
+
         elif augenGesamt == 11:
             anzahlMarken = self.rKasse.getStand()
             self.rKasse.auszahlen(anzahlMarken)
             self.marken = self.marken + anzahlMarken
+            
         else:
             differenzBetrag = 11 - augenGesamt
             self.marken = self.marken - differenzBetrag
