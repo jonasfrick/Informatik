@@ -9,5 +9,5 @@ class Spielmanager(object):
         self.rSpieler2 = pSpieler2
         self.rSpieler3 = pSpieler3
 
-    def spielrundeDurchfuehren():
+    def spielrundeDurchfuehren(self):
         print("Start")
