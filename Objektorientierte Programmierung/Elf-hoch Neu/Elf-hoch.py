@@ -12,4 +12,3 @@ spieler3 = Spieler('Zitterhand', würfel1, würfel2, kasse)
 spielManager = Spielmanager(spieler1, spieler2, spieler3)
 
 spielManager.spielrundeDurchfuehren()
-print(spieler1.getMarken(), spieler2.getMarken(), spieler3.getMarken())
