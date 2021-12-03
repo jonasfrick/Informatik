@@ -1,5 +1,3 @@
-from random import randint
-
-class Spielmanager(object):
-    def __init__(self):
-        self.kasse = 10
+class SpielManager(object):
+    def __init__(self, spielfeld):
+        self.spielfeld = spielfeld
