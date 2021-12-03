@@ -28,8 +28,9 @@ print("Jeder Spieler erhält zu Beginn 40 Marken")
 print("Derjenige, der zuletzt noch welche übrig hat, gewinnt!")
 print("Drücken Sie 'Enter', um eine Runde zu simulieren")
 while len(GM.getSpielerListe()) > 1:
-    e = input()
+    # e = input()
     GM.rundeSpielen()
+    print("")
 print()
 print("Der Spieler", GM.getSpielerListe()[0].getName(), "hat gewonnen")
 
