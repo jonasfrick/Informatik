@@ -11,14 +11,14 @@ while not spielerA >= 2:
 # Objekte generieren
 w1 = Wuerfel()
 w2 = Wuerfel()
-kasse = Kasse()
+kasse = Kasse(50)
 spielerL = []
 for i in range(spielerA):
     print()
     print("Spieler",i+1)
     name = str(input("Name: "))
     spielerL.append(Spieler(name,40,w1,w2,kasse))
-GM = GameManager(spielerL)
+GM = Spielmanager(spielerL)
 
 # Hauptspiel
 print()
@@ -27,9 +27,9 @@ print()
 print("Jeder Spieler erhält zu Beginn 40 Marken")
 print("Derjenige, der zuletzt noch welche übrig hat, gewinnt!")
 print("Drücken Sie 'Enter', um eine Runde zu simulieren")
-while GM.getSpielerA() > 1:
+while len(GM.getSpielerListe()) > 1:
     e = input()
     GM.rundeSpielen()
 print()
-GM.Gewinner()
+print("Der Spieler", GM.getSpielerListe()[0].getName(), "hat gewonnen")
 
