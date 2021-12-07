@@ -20,6 +20,12 @@ def division():
 
 	labelErgebisWert.config(text=ergebnis)
 
+def modulo():
+	ergebnis = str(round(float(entryZahl1.get()) % float(entryZahl2.get()), 2))
+
+	labelErgebisWert.config(text=ergebnis)
+
+
 tkFenster = Tk()
 tkFenster.title('Taschenrechner')
 tkFenster.geometry('258x195')
@@ -47,6 +53,9 @@ buttonMultiplikation.place(x=88 + 27, y=104, width=27, height=27)
 
 buttonDivision = Button(master=tkFenster, bg='#FBD975', text='/', command=division)
 buttonDivision.place(x=92 + 27 * 2, y=104, width=27, height=27)
+
+buttonModulo= Button(master=tkFenster, bg='#FBD975', text='%', command=modulo)
+buttonModulo.place(x=96 + 27 * 3, y=104, width=27, height=27)
 
 labelErgebnis = Label(master=tkFenster, bg='#D5E88F', text='Ergebnis:')
 labelErgebnis.place(x=54, y=144, width=100, height=27)
