@@ -1,40 +1,39 @@
 from tkinter import *
 
 def addition():
-	ergebnis = str(round(float(entryZahl1.get()) + float(entryZahl2.get()), 2))
+    ergebnis = str(round(float(entryZahl1.get()) + float(entryZahl2.get()), 2))
 
-	labelErgebisWert.config(text=ergebnis)
+    labelErgebisWert.config(text=ergebnis)
 
 def subtraktion():
-	ergebnis = str(round(float(entryZahl1.get()) - float(entryZahl2.get()), 2))
+    ergebnis = str(round(float(entryZahl1.get()) - float(entryZahl2.get()), 2))
 
-	labelErgebisWert.config(text=ergebnis)
+    labelErgebisWert.config(text=ergebnis)
 
 def multiplikation():
-	ergebnis = str(round(float(entryZahl1.get()) * float(entryZahl2.get()), 2))
+    ergebnis = str(round(float(entryZahl1.get()) * float(entryZahl2.get()), 2))
 
-	labelErgebisWert.config(text=ergebnis)
+    labelErgebisWert.config(text=ergebnis)
 
 def division():
-	ergebnis = str(round(float(entryZahl1.get()) / float(entryZahl2.get()), 2))
+    ergebnis = str(round(float(entryZahl1.get()) / float(entryZahl2.get()), 2))
 
-	labelErgebisWert.config(text=ergebnis)
+    labelErgebisWert.config(text=ergebnis)
 
 def modulo():
-	ergebnis = str(round(float(entryZahl1.get()) % float(entryZahl2.get()), 2))
+    ergebnis = str(round(float(entryZahl1.get()) % float(entryZahl2.get()), 2))
 
-	labelErgebisWert.config(text=ergebnis)
+    labelErgebisWert.config(text=ergebnis)
 
 
 tkFenster = Tk()
 tkFenster.title('Taschenrechner')
 tkFenster.geometry('258x195')
 
-imageHintergrund = PhotoImage(file='bg.gif')
-# Canvas für den Hintergrund
-canvasHintergrund = Canvas(master=tkFenster)
-canvasHintergrund.place(x=0, y=0, width=312, height=240)
-canvasHintergrund.create_image(0, 0, image=imageHintergrund, anchor='nw')
+#imageHintergrund = PhotoImage(file='bg.gif')
+#canvasHintergrund = Canvas(master=tkFenster)
+#canvasHintergrund.place(x=0, y=0, width=570, height=363)
+#canvasHintergrund.create_image(0, 0, image=imageHintergrund, anchor='nw')
 
 labelZahl1 = Label(master=tkFenster, bg='#FFCFC9', text='Zahl 1:')
 labelZahl1.place(x=54, y=24, width=100, height=27)
