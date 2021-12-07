@@ -30,6 +30,12 @@ tkFenster = Tk()
 tkFenster.title('Taschenrechner')
 tkFenster.geometry('258x195')
 
+imageHintergrund = PhotoImage(file='bg.gif')
+# Canvas für den Hintergrund
+canvasHintergrund = Canvas(master=tkFenster)
+canvasHintergrund.place(x=0, y=0, width=312, height=240)
+canvasHintergrund.create_image(0, 0, image=imageHintergrund, anchor='nw')
+
 labelZahl1 = Label(master=tkFenster, bg='#FFCFC9', text='Zahl 1:')
 labelZahl1.place(x=54, y=24, width=100, height=27)
 
