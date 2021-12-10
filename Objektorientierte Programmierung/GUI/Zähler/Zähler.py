@@ -1,19 +1,19 @@
 class Zähler(object):
     def __init__(self):
-        self.stand = 0
+        self.__stand__ = 0
 
     def weiterZählen(self):
-        self.stand += 1
+        self.__stand__ += 1
 
     def nullSetzen(self):
-        self.stand = 0
+        self.__stand__ = 0
 
     def zurückZählen(self):
-        if(self.stand > 0):
-            self.stand -= 1
+        if(self.__stand__ > 0):
+            self.__stand__ -= 1
 
     def getStand(self):
-        return self.stand
+        return self.__stand__
 
     def setStand(self, stand):
-        self.stand = stand
+        self.__stand__ = stand
