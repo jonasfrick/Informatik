@@ -4,8 +4,6 @@ from tkinter import *
 from math import *
 
 def btnClickFunction():
-    print("Clicked")
-
     x1 = float(xA.get())
     x2 = float(xB.get())
     x3 = float(xC.get())
