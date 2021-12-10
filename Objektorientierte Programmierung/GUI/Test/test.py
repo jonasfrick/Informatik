@@ -1,13 +1,28 @@
-from tkinter import *
+import tkinter as tk
+from tkinter import ttk
+from tkinter import * 
 
-win = Tk()
-win.title("Sebastian ist ein Stinker")
-win.geometry("200x50")
+# this is the function called when the button is clicked
+def btnClickFunction():
+	label.config(text="Du stinkst.")
 
-label = Label(master=win, text="Sebastian", fg="white", bg="red", font=("Arial", 20))
-label.place(x=0, y=0, width=200, height=20)
 
-label = Label(master=win, text="du stinkst", fg="black", bg="red", font=("Arial", 15))
-label.place(x=0, y=20, width=200, height=20)
 
-win.mainloop()
+root = Tk()
+
+# This is the section of code which creates the main window
+root.geometry('770x490')
+root.configure(background='#8A2BE2')
+root.title('Hello, I\'m the main window')
+
+
+# This is the section of code which creates the a label
+label = Label(root, text='Ich bin toll', bg='#8A2BE2', font=('verdana', 50, 'bold'))
+label.place(x=9, y=11)
+
+
+# This is the section of code which creates a button
+Button(root, text='Klick mich an', bg='#00008B', font=('verdana', 20, 'normal'), command=btnClickFunction).place(x=439, y=11)
+
+
+root.mainloop()
